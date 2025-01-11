@@ -101,7 +101,7 @@ public class EWastepasLogin extends JFrame {
                         System.out.println("Authentication successful: Username: " + userData[0] + ", Email: " + userData[1]);
                         JOptionPane.showMessageDialog(EWastepasLogin.this, "Login berhasil!");
                         dispose();
-                        new MainPage(userData[0], userData[1]).setVisible(true);
+                        new ChangePasswordPage(userData[0]).setVisible(true);
                     } else {
                         System.out.println("Authentication failed: Email or Password is incorrect.");
                         JOptionPane.showMessageDialog(EWastepasLogin.this, "Login gagal! Email atau password salah.");
