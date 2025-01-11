@@ -29,7 +29,7 @@ public class ForgotPasswordScreen extends JFrame {
         });
         add(backButton, BorderLayout.NORTH);
 
- // Main panel
+        // Main panel
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -51,7 +51,7 @@ public class ForgotPasswordScreen extends JFrame {
         gbc.gridwidth = 1;
         mainPanel.add(emailLabel, gbc);
 
-   // Email prompt
+        // Email prompt
         JLabel emailPrompt = new JLabel("Masukkan email anda di bawah untuk reset password");
         emailPrompt.setFont(new Font("Arial", Font.PLAIN, 12));
         gbc.gridx = 0;
@@ -77,7 +77,7 @@ public class ForgotPasswordScreen extends JFrame {
                         new ResetPasswordPage(emailField.getText()).setVisible(true);
                     } else {
                         JOptionPane.showMessageDialog(ForgotPasswordScreen.this, "Email tidak ditemukan.");
- }
+                    }
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -92,7 +92,7 @@ public class ForgotPasswordScreen extends JFrame {
         setVisible(true);
     }
 
- private boolean checkEmailExists(String email) throws Exception {
+    private boolean checkEmailExists(String email) throws Exception {
         // Detail koneksi database
         String dbUrl = "jdbc:mysql://localhost:3306/ewastepas"; // Ganti dengan URL database kamu
         String dbUser = "root"; // Ganti dengan pengguna database kamu
@@ -120,6 +120,6 @@ public class ForgotPasswordScreen extends JFrame {
             public void run() {
                 new ForgotPasswordScreen().setVisible(true);
             }
-        });
-    }
+        });
+    }
 }

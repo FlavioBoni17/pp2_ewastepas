@@ -47,7 +47,7 @@ public class UserAccountPage extends JFrame {
         editProfileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new EditUserProfile(username, email).setVisible(true);
+                new UserEditProfile(username, email).setVisible(true);
                 dispose();
             }
         });
